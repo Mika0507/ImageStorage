@@ -13,7 +13,9 @@ Una aplicación para guardar tus imágenes favoritas de manera fácil y segura. 
 
 ## Resumen de la construcción de Pickeeper
 
-La aplicación está construida con React para el lado del cliente y utiliza Supabase para cubrir las necesidades de base de datos y backend. Para asegurarnos de que los usuarios que utilizan esta aplicación sean los propietarios reales de las imágenes, implementamos un sistema de autenticación mediante Magic Link. Este sistema solicita un correo electrónico y envía un enlace para acceder a la aplicación. Al hacerlo, se genera un UID que te identifica en el almacenamiento de imágenes de Supabase. De esta manera, todas las imágenes que subas o elimines se registran en tu almacenamiento personal y no entran en conflicto con las de otros usuarios.
+La aplicación está construida con React para el lado del cliente y utiliza Supabase para cubrir las necesidades de base de datos y backend. Para asegurarnos de que los usuarios que utilizan esta aplicación sean los propietarios reales de las imágenes, implementamos un sistema de autenticación mediante Magic Link. Este sistema solicita un correo electrónico y envía un enlace para acceder a la aplicación. Al hacerlo, se genera un UID que te identifica en el almacenamiento de imágenes de Supabase. De esta manera, todas las imágenes que subas o elimines se registran en tu almacenamiento personal y no entran en conflicto con las de otros usuarios. 
+
+Utilicé Supabase porque es una herramienta práctica que proporciona un sistema de almacenamiento de datos rápido y facilita la generación de endpoints necesarios para tu aplicación. Esto permite enfocarse más en el desarrollo del lado del cliente.
 
 
 ## Autor
