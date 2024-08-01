@@ -34,9 +34,14 @@ Arranca la app con:
 ```bash
 pnpm start
 ```
+
+## Problemas
+
+A la hora de desarrollar la aplicación el primer problema con el que me encontré fué el límite de peticiones que le puedes hacer a Supabase. Si excedes ese límite te lanza un error 429 y tienes que esperar un tiempo a que te de acceso de nuevo. Haciendo algunas modificaciones en el código conseguí obtener el link via email de Supabase sin generar el error pero tienes un límite de veces que puedes ingresar.  
     
 ## 🔗 Links
 [Figma](https://www.figma.com/design/5kLdijstFw48B9UMGd5iUT/P%C3%A1gina-im%C3%A1genes-favoritas?node-id=1-2&t=o5tykypEjSHgKCDa-0)
 
 [Pickeeper](https://image-storage-pi.vercel.app/)
+
 
