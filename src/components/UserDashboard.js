@@ -38,11 +38,6 @@ export default function UserDashboard({ user, images, CDNURL, getImages }) {
 
   return (
     <header>
-      <h1>
-        <span className="title-1">Welcome</span> <span className="title-2">to</span> <span className="title-3">your</span>   
-        <span className="title-4">Pickeeper</span>  
-        <span className="title-5">wall!</span>
-      </h1>
       <div className="sign-out">
         <p>Current user: {user.email}</p>
         <button onClick={() => signOut()}>Sign Out</button>
@@ -60,7 +55,11 @@ export default function UserDashboard({ user, images, CDNURL, getImages }) {
       </div>
 
       <hr />
-      <h3>Your Pictures</h3>
+      <h1>
+        <span className="title-1">Welcome</span> <span className="title-2">to</span> <span className="title-3">your </span>   
+        <span className="title-4">Pickeeper </span>  
+        <span className="title-5">wall!</span>
+      </h1>
       <div className="pickeeper-grid">
         {images.map((image) => {
           return (
