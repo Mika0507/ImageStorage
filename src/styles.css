@@ -1,34 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Give+You+Glory&family=Hind+Vadodara&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Fuzzy+Bubbles:wght@400;700&family=Give+You+Glory&family=Hind+Vadodara&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Fuzzy+Bubbles:wght@400;700&family=Give+You+Glory&family=Hind+Vadodara&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
- :root {
-  color-green-prinary: #72fa93;
-  color-green-tertiary: #a0e548;
-  color-blue-primary: #9ac1f0;
-  color-yellow-primary: #f6c445;
-  color-red-primary: #e45f2b;
-  color-dark: 2D2D2D;
- }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-h1 {
-    color: blue;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+:root {
+  --color-green-primary: #72fa93;
+  --color-green-tertiary: #a0e548;
+  --color-blue-primary: #9ac1f0;
+  --color-yellow-primary: #f6c445;
+  --color-red-primary: #e45f2b;
+  --color-dark: 2D2D2D;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* Header */
+.header {
+  margin-top: 50px;
+}
 .logo {
-  width: 100%;
+  width: 40%;
   max-width: 920px;
   margin: 0 auto;
   display: block;
 }
 .app-subtitle {
+  font-family: 'Koho', sans-serif;
   text-align: center;
   margin: 25px auto;
   font-weight: 300;
@@ -36,7 +41,7 @@ h1 {
 /* Footer */
 .footer {
   margin-top: 100px;
-  background-color: aliceblue;
+  background-color: var(--color-green-tertiary);
   padding: 1rem;
   text-align: center;
 }
@@ -46,21 +51,30 @@ h1 {
 }
 
 /* Pictures Grid styles */
-.pictures-grid {
+.pickeeper-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
-  gap: 2rem 2rem;
+  gap: 2rem 6rem;
   padding: 1rem;
   justify-content: center;
 }
 
 /* Picture card styles */
 .pictures-card {
-  background-color: aliceblue;
+  padding: 1rem;
+  width: 250px;
+  height: auto;
+  border: 0.75px solid var(--color-dark);
+  background-color: white;
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
-  box-shadow: 0 10px 10px 0 regba(0, 0, 0, .5);
+  box-shadow:  0 6px 10px 0 rgba(154,	193,	240, .5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 .pictures-card:hover {
   transform: scale(1.03);
@@ -75,4 +89,96 @@ h1 {
 .pictures-card-title {
   font-size: 1.1rem;
   font-weight: bold;
+}
+
+/* input */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 2rem auto;
+  width: 80%;
+}
+.picture-input {
+  min-width: 300px;
+  padding: 15px;
+  margin: 25px 0px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 18px;
+  border: 1px solid #ccc;
+}
+label {
+  font-family: 'koho', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+.form-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.sign-out button {
+  width: 6rem;
+  height: 2rem;
+}
+
+button {
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  text-align: center;
+  background-color: var(--color-green-tertiary);
+  color: var(--color-dark);
+  box-shadow:  0 6px 10px 0 rgba(154,	193,	240, .5);
+  cursor: pointer;
+}
+
+/* Dashboard styles */
+h1 {
+  margin: 1rem 0;
+  font-family: 'inknut antiqua', sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+}
+.title-1 {
+  color: var(--color-blue-primary);
+}
+.title-2 {
+  color: var(--color-green-primary);
+}
+.title-3 {
+  color: var(--color-yellow-primary);
+}
+.title-4 {
+  color: var(--color-green-tertiary);
+}
+.title-5 {
+  color: var(--color-red-primary);
+}
+.sign-out {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.picture-selected {
+  margin: 25px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.picture-input-select {
+  width: 50%;
+  height: 3rem;
+  padding: 0.75rem;
+  margin: 1rem 0; 
+  border: 1px solid var(--color-green-tertiary);
+}
+
+p {
+  font-family: 'koho', sans-serif;
 }
