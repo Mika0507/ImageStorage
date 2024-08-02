@@ -43,10 +43,11 @@ export default function UserDashboard({ user, images, CDNURL, getImages }) {
         <button onClick={() => signOut()}>Sign Out</button>
       </div>
       <div className="picture-selected">
-        <p>
+        <label htmlFor="file-upload">
           Use the Choose file button below to upload an image to your gallery
-        </p>
+        </label>
         <input
+          id="file-upload"
           className="picture-input-select"
           type="file"
           accept="image/png, image/jpeg"
@@ -56,8 +57,10 @@ export default function UserDashboard({ user, images, CDNURL, getImages }) {
 
       <hr />
       <h1>
-        <span className="title-1">Welcome</span> <span className="title-2">to</span> <span className="title-3">your </span>   
-        <span className="title-4">Pickeeper </span>  
+        <span className="title-1">Welcome</span>{" "}
+        <span className="title-2">to</span>{" "}
+        <span className="title-3">your </span>
+        <span className="title-4">Pickeeper </span>
         <span className="title-5">wall!</span>
       </h1>
       <div className="pickeeper-grid">

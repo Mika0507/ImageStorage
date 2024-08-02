@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import "../styles.css";
 
 export default function LoginForm({
@@ -8,16 +8,19 @@ export default function LoginForm({
   setIsLoading,
   supabase,
 }) {
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+
   const magicLinkLogin = useCallback(async () => {
     if (isLoading) return;
     setIsLoading(true);
     try {
       const { error } = await supabase.auth.signInWithOtp({ email });
       if (error) throw error;
-      alert("Check your email for a Supabase Magic Link to Log In!");
+      setSuccessMessage("Check your email for a Supabase Magic Link to Log In!");
     } catch (error) {
       console.error("Error:", error);
-      alert("Error communicating with supabase. Please try again later");
+      setErrorMessage("Error communicating with supabase. Please try again later");
     } finally {
       setIsLoading(false);
     }
@@ -45,6 +48,9 @@ export default function LoginForm({
           </button>
         </div>
       </form>
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
+      {successMessage && <p className="success-message">{successMessage}</p>}
     </header>
   );
 }
+//
